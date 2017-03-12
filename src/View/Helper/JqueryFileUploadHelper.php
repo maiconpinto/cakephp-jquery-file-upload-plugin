@@ -20,6 +20,7 @@ class JqueryFileUploadHelper extends Helper
 
     public function form($entity = null)
     {
+<<<<<<< HEAD
         echo $this->getForm();
         echo $this->getGallery();
         echo $this->getTemplateUpload();
@@ -169,6 +170,11 @@ class JqueryFileUploadHelper extends Helper
                 </tr>
             {% } %}
             </script>';
+=======
+
+        //$this->loadStyles();
+        //$this->loadScripts();
+>>>>>>> 662e78340800a750e288549b5f0f506e10bcff0a
     }
 
     public function loadStyles()
