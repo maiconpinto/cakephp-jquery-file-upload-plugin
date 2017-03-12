@@ -53,7 +53,7 @@ class UploadHandlerController extends AppController
     public function initialize() {
         $this->return = array();
         $this->options = array(
-            'script_url' => $this->get_full_url().'/'.$this->basename($this->get_server_var('SCRIPT_NAME')),
+            'script_url' => $this->get_full_url().'/jquery-file-upload/upload-handler/',
             'upload_dir' => dirname($this->get_server_var('SCRIPT_FILENAME')).'/files/',
             'upload_url' => $this->get_full_url().'/files/',
             'input_stream' => 'php://input',
