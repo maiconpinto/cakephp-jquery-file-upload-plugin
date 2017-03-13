@@ -18,7 +18,7 @@ class JqueryFileUploadHelper extends Helper
      */
     protected $_defaultConfig = [];
 
-    public function form($entity = null)
+    public function form()
     {
         echo $this->getForm();
         echo $this->getGallery();
