@@ -26,7 +26,13 @@ class UploadHandlerController extends AppController
     }
 
     public function initialize() {
-        $this->loadComponent('JqueryFileUpload.Upload');
+        $options = [];
+
+        if ($this->request->session()->check('JqueryFileUpload.options')) {
+            $options = $this->request->session()->read('JqueryFileUpload.options');
+        }
+
+        $this->loadComponent('JqueryFileUpload.Upload', $options);
 
         $this->options = $this->Upload->getOptions();
     }
