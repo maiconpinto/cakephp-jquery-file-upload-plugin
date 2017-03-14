@@ -3,6 +3,7 @@ namespace JqueryFileUpload\View\Helper;
 
 use Cake\View\Helper;
 use Cake\View\View;
+use Cake\Filesystem\Folder;
 
 /**
  * JqueryFileUpload helper
@@ -17,6 +18,21 @@ class JqueryFileUploadHelper extends Helper
      * @var array
      */
     protected $_defaultConfig = [];
+
+    public function images($dir = 'files', $return = false)
+    {
+        if (is_dir(WWW_ROOT . $dir)) {
+            $folder = new Folder(WWW_ROOT . $dir);
+            $files = $folder->find('.*', true);
+
+            if ($return)
+                return $files;
+
+            foreach ($files as $file) {
+                echo $this->Html->image('/'. $dir . $file);
+            }
+        }
+    }
 
     public function form()
     {
