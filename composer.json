@@ -1,5 +1,5 @@
 {
-    "name": "your-name-here/JqueryFileUpload",
+    "name": "maiconpinto/cakephp-jquery-file-upload-plugin",
     "description": "JqueryFileUpload plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
