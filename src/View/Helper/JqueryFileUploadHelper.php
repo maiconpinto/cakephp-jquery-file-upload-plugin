@@ -41,8 +41,8 @@ class JqueryFileUploadHelper extends Helper
         echo $this->getTemplateUpload();
         echo $this->getTemplateDownload();
 
-        $this->loadStyles();
-        $this->loadScripts();
+        // $this->loadStyles();
+        // $this->loadScripts();
     }
 
     public function getForm()
