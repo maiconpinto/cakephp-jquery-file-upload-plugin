@@ -13,13 +13,19 @@
 
 $(function () {
     'use strict';
-    var base = (typeof baseUri != 'undefined') ? baseUri : '';
+    var url = '';
+
+    if (typeof baseUri != 'undefined') {
+        url = baseUri + 'jquery-file-upload/upload-handler';
+     } else {
+        url = base + '/jquery-file-upload/upload-handler'
+     }
 
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
         // Uncomment the following to send cross-domain cookies:
         //xhrFields: {withCredentials: true},
-        url: base + '/jquery-file-upload/upload-handler'
+        url: url
     });
 
     // Enable iframe cross-domain access via redirect option:
