@@ -13,7 +13,7 @@
 
 $(function () {
     'use strict';
-    var base = baseUri || '';
+    var base = (typeof baseUri != 'undefined') ? baseUri : '';
 
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
